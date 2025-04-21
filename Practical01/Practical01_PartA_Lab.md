@@ -30,13 +30,13 @@ By the end of this practical, you will:
    ```bash
    mkdir Practical01
    ```
-2. Inside the Practical01 folder, create another folder named `Practical01_PartA_Lab` for your Part A Lab activity.
+2. Inside the `Practical01` folder, create another folder named `PartA_Lab` for your Part A Lab activity.
    ```bash
-   mkdir Practical01/Practical01_PartA_Lab
+   mkdir Practical01/PartA_Lab
    ```
-3. Change to the Practical01_PartA_Lab directory:
+3. Change to the `PartA_Lab` directory:
    ```bash
-   cd Practical01/Practical01_PartA_Lab
+   cd Practical01/PartA_Lab
    ```
 4. Initialize the Node.js project:
    ```bash

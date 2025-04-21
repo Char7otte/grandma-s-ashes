@@ -8,10 +8,10 @@
 
 #### Requirements:
 
-- Inside the `Practical01` folder, create a new folder named `Practical01_PartB_Homework`.
-- Change to the `Practical01_PartB_Homework` directory:
+- Inside the `Practical01` folder, create a new folder named `PartB_Homework`.
+- Change to the `PartB_Homework` directory:
   ```bash
-   cd Practical01/Practical01_PartB_Homework
+   cd Practical01/PartB_Homework
   ```
 - Inside this folder, initialize the project:
   ```bash
