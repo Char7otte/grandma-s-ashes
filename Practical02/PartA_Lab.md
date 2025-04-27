@@ -2,31 +2,33 @@
 
 ## Quick Overview of REST API:
 
-REST (Representational State Transfer) is an architectural style where clients send HTTP requests (using methods like GET, POST, PUT, DELETE) to a server that exposes resources via endpoints.
+REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations.
 
-The server processes each request—parsing its method, URL, headers, and optional body—and returns an HTTP response with a status code, headers, and optional body.
+**Key Concepts:**
 
-This request-response cycle enables CRUD operations on resources (e.g., “foods”) in a standardized, stateless way.
+- **Client-Server Model**: Separation of concerns between the client (frontend/Postman) and server (Node.js/Express)
+- **Stateless Communication**: Each request contains all information needed to process it
+- **HTTP Methods**: GET, POST, PUT, DELETE correspond to Read, Create, Update, Delete
+- **Resources**: Entities (like "foods") identified by URLs
 
-#### **Map to CRUD:**
+**HTTP Request Structure:**
 
-- Create → POST
-- Read → GET
-- Update → PUT
-- Delete → DELETE
+```
+METHOD /resource HTTP/1.1
+Host: example.com
+Content-Type: application/json
 
-#### **Request Structure:**
+{request body if applicable}
+```
 
-- **Method**: (GET/POST/…)
-- **URL**: (e.g., `/foods`, `/foods/123`)
-- **Headers**: (e.g., `Content-Type: application/json`)
-- **Body**: (optional JSON payload for POST/PUT)
+**HTTP Response Structure:**
 
-#### **Response Structure:**
+```
+HTTP/1.1 STATUS_CODE STATUS_MESSAGE
+Content-Type: application/json
 
-- **Status Code**: (e.g., 200, 201, 400, 404)
-- **Headers**: (e.g., `Content-Type: application/json`)
-- **Body**: (optional JSON with data and “message”)
+{response body}
+```
 
 ---
 
