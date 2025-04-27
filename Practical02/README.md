@@ -1,11 +1,5 @@
 # Practical 02: Introduction to API
 
-## 🔁 GitHub Repository Instructions
-
-You are required to manage your practical work using your personal GitHub repository.
-
----
-
 ## 📂 Structure
 
 This practical is divided into two parts:
