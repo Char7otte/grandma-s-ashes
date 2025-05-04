@@ -1,18 +1,6 @@
 ## Part B: Homework (45 min)
 
-### **Task 1: Extend the "Foods" API**
-
-1. **Add Query Parameters for Filtering:**
-   - Extend the existing `GET /foods` endpoint to filter foods by their `name` query parameter.
-   - If a `name` is provided in the query string, return only foods whose names match or partially match the provided string. Example: `/foods?name=apple`.
-2. **Implement Error Handling:**
-   - Ensure proper error handling for invalid inputs:
-     - If a client tries to create or update a food with missing `name` or `calories`, return a `400` status code with a descriptive error message.
-     - If a client tries to access, update, or delete a food that does not exist (invalid `id`), return a `404` status code with a descriptive error message.
-
----
-
-### **Task 2: Write a Short Report (Max 300 Words)**
+### **Task 1: Write a Short Report (Max 500 Words)**
 
 For this task,
 
@@ -26,10 +14,16 @@ For this task,
   - `req.query`
   - `req.params.id`
 - **Describe the significance of using different HTTP methods** (e.g., GET, POST, PUT, DELETE) in your API. How do they relate to CRUD operations?
+- **Explain the meaning of these HTTP status codes**:
+  - `200 OK`
+  - `201 Created`
+  - `400 Bad Request`
+  - `404 Not Found`
+  - `500 Internal Server Error`
 
 ---
 
-### **Task 3: Capture Screenshots of Postman Tests**
+### **Task 2: Capture Screenshots of Postman Tests**
 
 For this task, you need to capture and submit screenshots of your Postman tests for the following CRUD operations:
 
