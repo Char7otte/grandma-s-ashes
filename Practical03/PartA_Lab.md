@@ -35,6 +35,7 @@ Here's how to enable the TCP/IP protocol for remote connections to your SQL Serv
 **Using SQL Server Configuration Manager:**
 
 - Open **SQL Server Configuration Manager**. You can find it in your Windows Start menu or by searching for it.
+  - If you cannot find it, type `SQLServerManager16.msc` (for SQL Server 2022) in the Start Page to open **SQL Server Configuration Manager**.
 - In the left pane, expand **SQL Server Network Configuration** and then your server instance name (usually "SQLEXPRESS").
 - In the right pane, right-click on **Protocols for SQLEXPRESS** and select **Properties**.
 - Under the **Protocol** tab, locate the **TCP/IP** entry.
@@ -62,7 +63,7 @@ Here's how to configure SQL Server Express to use mixed mode authentication:
 **Using SQL Server Management Studio (SSMS):**
 
 - Open **SQL Server Management Studio (SSMS)**. You can find it in your Windows Start menu or by searching for it.
-- Connect to your SQL Server instance using appropriate credentials (usually the default administrator account "sa").
+- Connect to your SQL Server instance using Windows Authentication.
 - In the Object Explorer window, right-click on your server instance name (usually "SQLEXPRESS") and select **Properties**.
 - Go to the **Security** page.
 - Under **Server authentication**, select **SQL Server and Windows Authentication mode**. This allows login using both Windows credentials and dedicated SQL Server logins.
