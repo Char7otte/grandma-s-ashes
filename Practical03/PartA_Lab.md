@@ -71,23 +71,10 @@ Here's how to configure SQL Server Express to use mixed mode authentication:
 
 ![Change authentication mode](./screenshots/4_mixed_server_authentication_mode.png)
 
-**1.3 Create a Dedicated Login User (Optional but Recommended):**
-
-For improved security, consider creating a dedicated SQL Server login user specifically for your Node.js application instead of using the "sa" account. Here's how:
-
-- In SSMS, navigate to **Security** > **Logins**.
-- Right-click on **Logins** and select **New Login**.
-- In the **Login name** field, enter a descriptive name for your application user (e.g., "booksapi_user").
-- Select **SQL Server authentication**.
-- Set a strong password for the user.
-- Under **Map to Server Roles**, grant the user the necessary permissions to access and modify the database. You can adjust these permissions based on your specific needs.
-- Click **OK** to create the login user.
-
 **Important Notes:**
 
 - Restart your SQL Server service after making changes to the configuration.
 - Remember to replace "SQLEXPRESS" with your actual server instance name if it differs.
-- Use strong passwords for both the SQL Server instance (if using "sa") and the dedicated login user (if created).
 
 By following these steps, you've successfully configured your Microsoft SQL Server Express instance to enable remote connections via TCP/IP and support mixed mode authentication. This allows your Node.js application to connect and interact with the database in the next steps of the practical.
 
@@ -157,6 +144,29 @@ VALUES
 Upon successful execution, you should see a message indicating that the table was created and the data was inserted. You can verify this by right-clicking on the "bed_db" database in the Object Explorer and selecting **Refresh**. Then, expand the database and navigate to **Tables**. You should see the "Books" table with the inserted data.
 
 This step provides a foundation for the next steps in the practical, where you'll connect to the database from your Node.js application and perform CRUD operations on the "Books" table.
+
+**4. Create a Dedicated Login User:**
+
+Create a dedicated SQL Server login user specifically for your Node.js application. Here's how:
+
+- In SSMS, navigate to **Security** > **Logins**.
+- Right-click on **Logins** and select **New Login**.
+
+![Step for creating Login User](./screenshots/9_create_login_user.png)
+
+- In the **Login name** field, enter a descriptive name for your application user (e.g., "booksapi_user").
+- Select **SQL Server authentication**.
+
+  - Set the password for the user.
+  - Under the password fields, deselect the checkbox labeled "Enforce password policy". (You might also want to deselect "Enforce password expiration" for application logins to prevent connectivity issues when the password expires, but be aware of the security implications of doing so).
+
+- Under **User Mapping**, map the user to `bed_db` with the `db_datareader` and `db_datawriter` database role membership. the necessary permissions to access and modify the database. You can adjust these permissions based on your specific needs.
+
+![Step for Login User Mapping](./screenshots/10_login_user_mapping.png)
+
+- Click **OK** to create the login user.
+
+You have now successfully created a dedicated SQL Server login user that is ready to be used in your Node.js application's database configuration for the next steps.
 
 ---
 
@@ -289,7 +299,7 @@ const dbConfig = require("./dbConfig");
 const app = express();
 const port = process.env.PORT || 3000; // Use environment variable or default port
 
-app.use(express.json()); // middleware inbuilt in express to recognize the incoming Request Object as a JSON Object. 
+app.use(express.json()); // middleware inbuilt in express to recognize the incoming Request Object as a JSON Object.
 app.use(express.urlencoded()); // middleware inbuilt in express to recognize the incoming Request Object as strings or arrays
 
 app.listen(port, async () => {
