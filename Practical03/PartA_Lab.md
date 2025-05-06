@@ -364,7 +364,7 @@ Practical03/
 
 **5. Running the Application (node app.js):**
 
-- In your terminal window, navigate to the root directory of your project (`books-api-mvc-db`).
+- In your terminal window, navigate to the root directory of your project (`books-api-db`).
 - Run the following command to start your Node.js application:
 
 ```bash
