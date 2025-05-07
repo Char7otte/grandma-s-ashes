@@ -99,7 +99,7 @@ Here are the steps you should follow:
     - Use Postman to test all your new Students API endpoints (`GET /students`, `GET /students/:id`, `POST /students`, `PUT /students/:id`, `DELETE /students/:id`).
     - Verify that all CRUD operations work as expected.
     - Test edge cases like getting, updating, or deleting a non-existent student ID (should return 404).
-    - Test sending invalid data (e.g., missing required fields in POST/PUT) and observe the resulting `500 Internal Server Error` from the database.
+    - Test sending invalid data (e.g., missing required fields in POST/PUT) and observe the resulting `400 Bad Request Error` from the database.
 
 This assignment will give you hands-on practice in applying the consolidated coding style to build a new API with full CRUD functionality.
 
