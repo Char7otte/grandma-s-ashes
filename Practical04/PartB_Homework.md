@@ -4,42 +4,39 @@
 
 Reflect on the process of refactoring the API code into the MVC structure by answering the following questions:
 
-1. What were the main changes you made to refactor the code into MVC architecture?
-2. What challenges did you face during the refactoring process?
-3. How does the MVC structure change the way you think about adding new features?
-4. In what ways is the MVC version more organized or easier to understand than the previous version?
-5. How does separating concerns (Model vs. Controller) make the code better?
+1.  What were the main changes you made to refactor the code into MVC architecture? Describe how you moved code between files and folders.
+2.  What challenges did you face during the refactoring process?
+3.  How does the MVC structure change the way you think about adding new features or modifying existing ones compared to the previous non-MVC structure?
+4.  In what specific ways do you think the MVC version is more organized or easier to understand and maintain than the previous version where all logic was in `app.js`?
+5.  Explain how separating concerns (putting database logic in the **Model** and request handling in the **Controller**) makes the code better from a development perspective.
 
 ### Task 2: Reflecting on Robustness & Security
 
 Reflect on the impact of validation, error handling, and parameterized queries by answering the following questions:
 
-1. How does input validation make the API more reliable?
-2. Explain in your own words how parameterized queries prevent SQL injection. Why is this more secure than building query strings with concatenation?
-3. Consider a potential security risk (other than SQL injection). How might robust error handling help mitigate it?
+1.  How does implementing input validation middleware make the API more reliable and user-friendly? Provide an example of invalid input that your validation would now handle.
+2.  Explain in your own words how parameterized queries prevent SQL injection attacks. Why is this approach fundamentally more secure than building SQL query strings by concatenating variable data?
+3.  Consider a potential security risk for an API (other than SQL injection, e.g., brute-force attacks, exposing sensitive data in responses). How might robust error handling (like not showing detailed error messages to the client) help mitigate such a risk?
 
-### Task 3: Applying Concepts to Students API
+### Task 3: Applying Concepts / Exploration (Choose ONE)
 
-Apply what you've learned to the Students API that you created in the homework for the last practical:
+Choose **ONE** of the following tasks to apply or explore the concepts learned:
 
-1. Refactor your Students API to follow the MVC architecture.
-2. Implement validation middleware for student data.
-3. Ensure all database interactions use parameterized queries.
-4. Add appropriate error handling.
+- **Apply to Students API:** Take the Students API you built for the homework in the previous practical (Part B, Task 2). Refactor this Students API to follow the MVC architecture, implement input validation for creating/updating students, add general error handling, and ensure all database queries use parameterized queries. Your refactored Students API project should have:
 
-Your refactored Students API should have:
+  - A model (`studentModel.js`) for database operations
+  - A controller (`studentController.js`) for request handling
+  - Validation middleware for student data (e.g., `studentValidation.js`)
+  - Main application file (`app.js`) tying everything together
 
-- A model (`studentModel.js`) for database operations
-- A controller (`studentController.js`) for request handling
-- Validation middleware for student data
-- Main application file (`app.js`) tying everything together
+- **Research Security Practice:** Research one other security best practice specifically for Node.js APIs (examples: rate limiting, CORS configuration, using security middleware like helmet, sanitizing output). Briefly describe what this practice is, why it's important, and how you might implement it conceptually in your Express API.
 
 ### Submission:
 
 Submit your answers to the reflection and exploration tasks. Ensure your answers are clear and directly address the questions asked.
 
-- Create a text file `Homework_reflection.txt` answering the reflection questions.
-- Commit and push your refactored code for both Books API and Students API to your BED Practicals **Github repository**.
+- Create a text file `Homework_reflection.txt` answering the reflection questions (Tasks 1 & 2).
+- Commit and push your refactored code for both Books API and Students API (if you chose that option for Task 3) to your BED Practicals **Github repository**.
 
 ### Pro-tip:
 
