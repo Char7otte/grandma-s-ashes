@@ -25,6 +25,10 @@ For this Lab Activity part, you will find the instructions in the **File:** `Par
 
 For this Homework part, you will find the instructions in the **File:** `PartB_Homework.md`
 
+### ✨ Optional Topic: Nodemon
+
+For those interested in improving their **Node.js development workflow**, information on **nodemon** (a tool to automatically restart your Node.js server) is available in the optional extra **File**: `Extra.md`.
+
 ## 📤 Submission
 
 - Complete the Lab Activity and Homework as specified in Part A and B
