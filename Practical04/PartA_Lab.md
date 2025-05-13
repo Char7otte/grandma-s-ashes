@@ -33,7 +33,7 @@ In this part, you will be refactoring code based on your existing Books API code
       DB_DATABASE=bed_db
       DB_PORT=1433
       ```
-    - Create a `.gitignore` file and add `node_modules` and `.env` to it
+    - Update your `.gitignore` file and add `.env` to it
 
     **Explanation: Environment Variables and Security**
 
