@@ -18,9 +18,7 @@ Reflect on the impact of validation, error handling, and parameterized queries b
 2.  Explain in your own words how parameterized queries prevent SQL injection attacks. Why is this approach fundamentally more secure than building SQL query strings by concatenating variable data?
 3.  Consider a potential security risk for an API (other than SQL injection, e.g., brute-force attacks, exposing sensitive data in responses). How might robust error handling (like not showing detailed error messages to the client) help mitigate such a risk?
 
-### Task 3: Applying Concepts / Exploration (Choose ONE)
-
-Choose **ONE** of the following tasks to apply or explore the concepts learned:
+### Task 3: Applying Concepts
 
 - **Apply to Students API:** Take the Students API you built for the homework in the previous practical (Part B, Task 2). Refactor this Students API to follow the MVC architecture, implement input validation for creating/updating students, add general error handling, and ensure all database queries use parameterized queries. Your refactored Students API project should have:
 
@@ -28,8 +26,6 @@ Choose **ONE** of the following tasks to apply or explore the concepts learned:
   - A controller (`studentController.js`) for request handling
   - Validation middleware for student data (e.g., `studentValidation.js`)
   - Main application file (`app.js`) tying everything together
-
-- **Research Security Practice:** Research one other security best practice specifically for Node.js APIs (examples: rate limiting, CORS configuration, using security middleware like helmet, sanitizing output). Briefly describe what this practice is, why it's important, and how you might implement it conceptually in your Express API.
 
 ### Submission:
 
