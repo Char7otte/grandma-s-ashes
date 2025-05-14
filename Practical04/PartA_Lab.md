@@ -239,10 +239,6 @@ In this part, you will be refactoring code based on your existing Books API code
       async function getBookById(req, res) {
         try {
           const id = parseInt(req.params.id);
-          if (isNaN(id)) {
-            return res.status(400).json({ error: "Invalid book ID" });
-          }
-
           const book = await bookModel.getBookById(id);
           if (!book) {
             return res.status(404).json({ error: "Book not found" });
