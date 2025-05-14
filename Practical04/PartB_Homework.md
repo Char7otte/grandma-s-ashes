@@ -32,7 +32,7 @@ Reflect on the impact of validation, error handling, and parameterized queries b
 Submit your answers to the reflection and exploration tasks. Ensure your answers are clear and directly address the questions asked.
 
 - Create a text file `Homework_reflection.txt` answering the reflection questions (Tasks 1 & 2).
-- Commit and push your refactored code for both Books API and Students API (if you chose that option for Task 3) to your BED Practicals **Github repository**.
+- Commit and push your refactored code for both Books API and Students API (Task 3) to your BED Practicals **Github repository**.
 
 ### Pro-tip:
 
