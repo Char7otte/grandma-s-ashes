@@ -643,3 +643,5 @@ However, the GET (View Details) functionality is partially complete. The DELETE 
 - **GET (View Details):** Fetching the data for a single book based on its ID.
 - **DELETE (Delete):** Sending a DELETE request to the API and updating the list on `index.html`.
 - **PUT (Update):** Performing a `fetch` `PUT` request to the API's `/books/:id` endpoint
+
+## End of Lab Activity

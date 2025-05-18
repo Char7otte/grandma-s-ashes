@@ -78,4 +78,4 @@ Commit and push your updated `books-api-mvc-db` project code, updated **Students
 
 - Use the browser's developer tools (especially the "Network" tab) to inspect the HTTP requests your frontend is sending and the responses it receives from your API. This is invaluable for debugging frontend-backend communication.
 
-## End of Practical 05
+## End of Homework
