@@ -373,6 +373,8 @@ This task expands the user management functionalities to include searching for u
       - In the **Key** field, enter `searchTerm`.
       - In the **Value** field, enter the search term you want to use. For example, you could enter "user" to search for users with "user" in their username or email.
 
+        ![Step for adding query parameter in Postman ](./screenshots/1_postman_params.png)
+
     - **Sending the Request:**
 
       - Ensure the request method is set to `GET`.
