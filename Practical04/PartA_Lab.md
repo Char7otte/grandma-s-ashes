@@ -502,7 +502,7 @@ Verify that all your database interactions use **Parameterized Queries** to prev
 Thoroughly test your refactored and enhanced API using **Postman**.
 
 - Run your Node.js application (`node app.js`).
-- Test all implemented **CRUD endpoints** (`GET /books`, `GET /books/:id`, `POST /books`, `PUT /books/:id`, `DELETE /books/:id` - if applicable) to ensure they still work correctly after refactoring.
+- Test all implemented **CRUD endpoints** (`GET /books`, `GET /books/:id`, `POST /books`) to ensure they still work correctly after refactoring.
 - **Test Validation:** Send `POST /books` requests with invalid or missing data to verify that your validation middleware intercepts them and returns a **400 Bad Request** response with the expected error message.
 - Verify **graceful shutdown** (`Ctrl+C`) still works.
 
