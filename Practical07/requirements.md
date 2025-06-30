@@ -207,11 +207,15 @@ function verifyJWT(req, res, next) {
 
     // Check user role for authorization (replace with your logic)
     const authorizedRoles = {
-      "/books": ["member", "librarian"], // Anyone can view books
-      "/books/[0-9]+/availability": ["librarian"], // Only librarians can update availability
+        // Only librarians can create books
+        "POST /books": ["librarian"], 
+        // Anyone can view books
+        "GET /books": ["member", "librarian"], 
+        // Only librarians can update availability
+        "PUT /books/[0-9]+/availability": ["librarian"], 
     };
 
-    const requestedEndpoint = req.url;
+    const requestedEndpoint = `${req.method} ${req.url}`; // Include method in endpointl;
     const userRole = decoded.role;
 
     const authorizedRole = Object.entries(authorizedRoles).find(
