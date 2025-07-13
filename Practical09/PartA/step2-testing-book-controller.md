@@ -18,10 +18,10 @@ Let's focus on testing the `getAllBooks` function in your `booksController.js` f
     // booksController.test.js
 
     const booksController = require("../controllers/booksController");
-    const Book = require("../models/Book");
+    const Book = require("../models/bookModel");
 
     // Mock the Book model
-    jest.mock("../models/Book"); // Replace with the actual path to your Book model
+    jest.mock("../models/bookModel"); // Replace with the actual path to your Book model
 
     describe("booksController.getAllBooks", () => {
       beforeEach(() => {
