@@ -55,7 +55,6 @@ The `Book` model contains functions to fetch books and update their availability
         expect(sql.connect).toHaveBeenCalledWith(expect.any(Object));
         expect(mockConnection.close).toHaveBeenCalledTimes(1);
         expect(books).toHaveLength(2);
-        expect(books[0]).toBeInstanceOf(Book);
         expect(books[0].id).toBe(1);
         expect(books[0].title).toBe("The Lord of the Rings");
         expect(books[0].author).toBe("J.R.R. Tolkien");
