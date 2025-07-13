@@ -17,7 +17,7 @@ Let's focus on testing the `getAllBooks` function in your `booksController.js` f
     ```javascript
     // booksController.test.js
 
-    const booksController = require("../controllers/booksController");
+    const booksController = require("../controllers/bookController");
     const Book = require("../models/bookModel");
 
     // Mock the Book model
