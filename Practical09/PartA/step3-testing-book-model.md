@@ -14,7 +14,7 @@ The `Book` model contains functions to fetch books and update their availability
 
     ```javascript
     // book.test.js
-    const Book = require("../models/Book");
+    const Book = require("../models/bookModel");
     const sql = require("mssql");
 
     jest.mock("mssql"); // Mock the mssql library
